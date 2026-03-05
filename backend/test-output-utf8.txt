@@ -1,0 +1,54 @@
+﻿[dotenv@17.3.1] injecting env (3) from .env -- tip: ≡ƒñû agentic secret storage: https://dotenvx.com/as2
+Setting up test user and room...
+Initialization complete.
+
+
+
+======================
+TEST 1 - Motion Detected
+======================
+HTTP Status: 200
+JSON Response: {"roomId":"69a91a8260bebd285ec0290b","occupancyStatus":"Occupied","message":"Automation rules triggered"}
+
+
+======================
+TEST 2 - No Motion (< 10s locally)
+======================
+Waiting for 5 seconds...
+HTTP Status: 200
+JSON Response: {"roomId":"69a91a8260bebd285ec0290b","occupancyStatus":"Occupied","message":"State logged"}
+
+
+======================
+TEST 3 - No Motion (> 10s locally)
+======================
+Waiting for 12 seconds...
+HTTP Status: 200
+JSON Response: {"roomId":"69a91a8260bebd285ec0290b","occupancyStatus":"Idle","message":"Automation rules triggered"}
+
+
+======================
+TEST 4 - Return to Occupied
+======================
+HTTP Status: 200
+JSON Response: {"roomId":"69a91a8260bebd285ec0290b","occupancyStatus":"Occupied","message":"Automation rules triggered"}
+
+
+======================
+TEST 5 - Sleep Mode
+======================
+HTTP Status: 200
+JSON Response: {"roomId":"69a91a8260bebd285ec0290b","occupancyStatus":"Sleeping","message":"Automation rules triggered"}
+
+
+======================
+TEST 6 - Rapid Updates Stress Test
+======================
+Waiting for 1 seconds...
+Waiting for 1 seconds...
+Waiting for 1 seconds...
+Waiting for 1 seconds...
+Waiting for 1 seconds...
+Executed 5 rapid updates. Status Codes: 200, 200, 200, 200, 200
+HTTP Status: 200
+JSON Response: {"roomId":"69a91a8260bebd285ec0290b","occupancyStatus":"Occupied","message":"State logged"}

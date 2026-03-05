@@ -1,0 +1,44 @@
+﻿src/components/dashboard/StatsCard.tsx(4,1): error TS6133: 'motion' is declared but its value is never read.
+src/components/dashboard/StatsCard.tsx(5,10): error TS1484: 'LucideIcon' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/rooms/DeviceCard.tsx(3,1): error TS6133: 'Badge' is declared but its value is never read.
+src/components/rooms/DeviceCard.tsx(5,10): error TS1484: 'Device' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/components/rooms/DeviceCard.tsx(11,5): error TS6133: 'Power' is declared but its value is never read.
+src/components/rooms/RoomCard.tsx(5,10): error TS1484: 'Room' is a type and must be imported using a type-only import when 'verbatimModuleSyntax' is enabled.
+src/hooks/useDevices.ts(12,24): error TS6133: 'variables' is declared but its value is never read.
+src/pages/Admin.tsx(8,5): error TS6133: 'Plus' is declared but its value is never read.
+src/pages/Admin.tsx(13,5): error TS6133: 'MoreVertical' is declared but its value is never read.
+src/pages/Admin.tsx(14,5): error TS6133: 'CheckCircle2' is declared but its value is never read.
+src/pages/Admin.tsx(15,5): error TS6133: 'XCircle' is declared but its value is never read.
+src/pages/Admin.tsx(16,5): error TS6133: 'Cpu' is declared but its value is never read.
+src/pages/Admin.tsx(20,1): error TS6192: All imports in import declaration are unused.
+src/pages/Admin.tsx(48,13): error TS2353: Object literal may only specify known properties, and 'powerWatts' does not exist in type 'Partial<Device> & { roomNumber: string; }'.
+src/pages/Admin.tsx(133,63): error TS2339: Property 'devices' does not exist on type 'Room'.
+src/pages/Analytics.tsx(7,41): error TS6133: 'Legend' is declared but its value is never read.
+src/pages/Analytics.tsx(12,5): error TS6133: 'Clock' is declared but its value is never read.
+src/pages/Analytics.tsx(13,17): error TS6133: 'PieIcon' is declared but its value is never read.
+src/pages/Analytics.tsx(15,5): error TS6133: 'ArrowDownRight' is declared but its value is never read.
+src/pages/Automation.tsx(6,1): error TS6133: 'Badge' is declared but its value is never read.
+src/pages/Automation.tsx(13,5): error TS6133: 'Timer' is declared but its value is never read.
+src/pages/Automation.tsx(14,5): error TS6133: 'Calendar' is declared but its value is never read.
+src/pages/Automation.tsx(16,5): error TS6133: 'Cpu' is declared but its value is never read.
+src/pages/Dashboard.tsx(5,5): error TS6133: 'PlugZap' is declared but its value is never read.
+src/pages/Dashboard.tsx(6,5): error TS6133: 'DoorClosed' is declared but its value is never read.
+src/pages/Dashboard.tsx(9,5): error TS6133: 'Moon' is declared but its value is never read.
+src/pages/Dashboard.tsx(10,5): error TS6133: 'Coffee' is declared but its value is never read.
+src/pages/RoomDetails.tsx(11,5): error TS6133: 'Zap' is declared but its value is never read.
+src/pages/RoomDetails.tsx(19,1): error TS6133: 'motion' is declared but its value is never read.
+src/pages/Rooms.tsx(5,16): error TS6133: 'Filter' is declared but its value is never read.
+src/pages/Rooms.tsx(5,32): error TS6133: 'Grid' is declared but its value is never read.
+src/pages/Rooms.tsx(5,46): error TS6133: 'ListIcon' is declared but its value is never read.
+src/pages/Rooms.tsx(6,1): error TS6133: 'Badge' is declared but its value is never read.
+src/pages/Rooms.tsx(21,11): error TS6133: 'stats' is declared but its value is never read.
+src/pages/Rooms.tsx(62,34): error TS2552: Cannot find name 'motion'. Did you mean 'Option'?
+src/pages/Settings.tsx(4,1): error TS6133: 'Badge' is declared but its value is never read.
+src/pages/Settings.tsx(7,5): error TS6133: 'Mail' is declared but its value is never read.
+src/pages/Settings.tsx(8,5): error TS6133: 'Shield' is declared but its value is never read.
+src/pages/Settings.tsx(9,5): error TS6133: 'Lock' is declared but its value is never read.
+src/pages/Settings.tsx(10,5): error TS6133: 'Bell' is declared but its value is never read.
+src/pages/Settings.tsx(11,5): error TS6133: 'Monitor' is declared but its value is never read.
+src/pages/Settings.tsx(12,5): error TS6133: 'History' is declared but its value is never read.
+src/pages/Settings.tsx(14,5): error TS6133: 'ChevronRight' is declared but its value is never read.
+src/pages/Settings.tsx(19,1): error TS6133: 'motion' is declared but its value is never read.

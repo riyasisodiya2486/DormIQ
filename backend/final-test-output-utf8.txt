@@ -1,0 +1,16 @@
+﻿[dotenv@17.3.1] injecting env (3) from .env -- tip: ΓÜÖ∩╕Å  write to custom object with { processEnv: myObject }
+Connected to MongoDB
+Register Response Status: 201
+Room renamed to 101
+Device Creation Response Status: 201
+Device status set to true
+IoT Update 1 (Occupied) Response Status: 200
+IoT Update 1 Response Data: {"roomId":"69a92b9f60bebd285ec0299b","occupancyStatus":"Occupied","message":"Automation rules triggered"}
+Waiting 1 second...
+IoT Update 2 (No motion) Response Status: 200
+IoT Update 2 Response Data: {"roomId":"69a92b9f60bebd285ec0299b","occupancyStatus":"Occupied","message":"State logged"}
+Waiting 12 seconds for idle threshold...
+IoT Update 3 (Trigger Idle) Response Status: 200
+IoT Update 3 Response Data: {"roomId":"69a92b9f60bebd285ec0299b","occupancyStatus":"Idle","message":"Automation rules triggered"}
+device.status: false
+device.autoDisabled: true
