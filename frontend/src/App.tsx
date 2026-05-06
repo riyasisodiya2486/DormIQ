@@ -5,6 +5,8 @@ import { useEffect, type ReactNode } from 'react';
 import { Sidebar } from './components/layout/Sidebar';
 import { Topbar } from './components/layout/Topbar';
 import { useSocketSync } from './hooks/useSocket';
+import { useDemoMode } from './hooks/useDemoMode';
+import { ToastContainer } from './components/ui/Toast';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -16,13 +18,21 @@ import Admin from './pages/Admin';
 import Settings from './pages/Settings';
 import { useSystemStore } from './store/systemStore';
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
+    },
+  },
+});
 
 function ProtectedRoute({ children }: { children: ReactNode }) {
   const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
   const sidebarCollapsed = useSystemStore((s) => s.sidebarCollapsed);
 
-  useSocketSync(); // Global sync hook
+  useSocketSync();  // Global real-time sync
+  useDemoMode();    // Demo simulation (only active when demoMode === true)
 
   if (!isAuthenticated) return <Navigate to="/login" replace />;
 
@@ -32,7 +42,7 @@ function ProtectedRoute({ children }: { children: ReactNode }) {
       <Topbar />
       <main
         className={`pt-24 pb-12 px-8 transition-all duration-300 min-h-screen
-        ${sidebarCollapsed ? 'pl-28' : 'pl-72'}`}
+                ${sidebarCollapsed ? 'pl-28' : 'pl-72'}`}
       >
         <div className="max-w-7xl mx-auto">
           {children}
@@ -71,6 +81,8 @@ export default function App() {
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </BrowserRouter>
+      {/* Global Toast Notifications */}
+      <ToastContainer />
     </QueryClientProvider>
   );
 }
